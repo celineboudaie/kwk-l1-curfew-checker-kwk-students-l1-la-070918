@@ -35,8 +35,10 @@ end
 
   it "should say you're in trouble if it's later than 11" do 
     expect(curfew_checker(12)).to eq("You're in trouble! Better get home quick!")
- 
-  end
+ if time> 11
+ puts "You're in trouble! Better get home quick!
+end
+end
 
   it "should say you can keep having fun" do 
     expect(curfew_checker(9)).to eq("Keep having fun!")
