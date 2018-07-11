@@ -3,15 +3,24 @@ describe "#simple_curfew_checker" do
 
   it "should tell you if you're in trouble if it's 11" do 
     expect(simple_curfew_checker(11)).to eq("You're in trouble! Better get home quick!")
-  end
+if time >=11
+  puts "You're in trouble! Better get home quick!"
+end
+end
 
   it "should tell you if you're in trouble if it's later than 11" do 
     expect(simple_curfew_checker(12)).to eq("You're in trouble! Better get home quick!")
-  end
+  
+if time >11 
+  puts "You're in trouble! Better get home quick!"
+end
+end
 
-  it "should not tell you you're in trouble when time is before 11" do 
+it "should not tell you you're in trouble when time is before 11" do 
     expect(simple_curfew_checker(10)).to eq(nil)
-  end
+  if time< 11
+puts "You're not in trouble"
+end
 end
 
 describe "#curfew_checker" do
@@ -19,11 +28,14 @@ describe "#curfew_checker" do
 
   it "should say you're in trouble if it's 11" do 
     expect(curfew_checker(11)).to eq("You're in trouble! Better get home quick!")
-    
-  end
+   if time=11 
+    puts "You're in trouble! Better get home quick!
+end
+end
 
   it "should say you're in trouble if it's later than 11" do 
     expect(curfew_checker(12)).to eq("You're in trouble! Better get home quick!")
+ 
   end
 
   it "should say you can keep having fun" do 
